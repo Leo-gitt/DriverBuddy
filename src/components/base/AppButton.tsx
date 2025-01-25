@@ -26,27 +26,40 @@ const AppButton: React.FC<ButtonProps> = ({
   const borderColor = "#FA6400";
 
   return (
-    <button
+    <div
       style={{
-        width,
-        height,
-        borderRadius,
-        backgroundColor: isHovered
-          ? hoverBackgroundColor
-          : defaultBackgroundColor,
-        color: isHovered ? hoverTextColor : defaultTextColor,
-        border: `1px solid ${borderColor}`,
-        cursor: "pointer",
-        fontSize: "16px",
-        transition: "background-color 0.3s, color 0.3s, border-color 0.3s",
+        display: "flex",       // Centers the button horizontally
+        justifyContent: "center",  // Centers horizontally
+        alignItems: "center",      // Centers vertically if necessary
+        width: "100%",            // Make sure it takes up full width
       }}
-      onClick={onClick}
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
     >
-      {children}
-      {showIcon && <i className="fa-solid fa-arrow-right ml-4"></i>}
-    </button>
+      <button
+        style={{
+          width: width,
+          height: height,
+          borderRadius: borderRadius,
+          backgroundColor: isHovered
+            ? hoverBackgroundColor
+            : defaultBackgroundColor,
+          color: isHovered ? hoverTextColor : defaultTextColor,
+          border: `1px solid ${borderColor}`,
+          cursor: "pointer",
+          fontSize: "16px",
+          transition: "background-color 0.3s, color 0.3s, border-color 0.3s",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          padding: "0 1rem", // Padding for better mobile interaction
+        }}
+        onClick={onClick}
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
+      >
+        {children}
+        {showIcon && <i className="fa-solid fa-arrow-down ml-3"></i>}
+      </button>
+    </div>
   );
 };
 

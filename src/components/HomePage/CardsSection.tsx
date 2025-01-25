@@ -1,28 +1,56 @@
-import React from 'react'
+import React from 'react';
 
 const CardsSection = () => {
   return (
-    <div className='w-11/12 mx-auto bg-white pb-20 pt-20'>
-        <h2 className='text-center text-5xl  mb-20'>Everything you need for the Perfect Road Trip</h2>
-        <div className='flex'>
-            <div className='border-2 border-red-500 mr-5 p-5 w-1/3 rounded-xl'>
-                <p><i className="fa-solid fa-gas-pump text-4xl text-orange-500 mb-5"></i></p>
-                <p className='text-xl font-bold  mt-5 mb-8'>Save on Gas</p>
-                <p>Compare real-time gas prices and find the best deals on your route</p>
-            </div>
-            <div className='border-2 border-red-500 mr-5 w-1/3 p-5  rounded-xl'>
-                <p><i className="fa-solid fa-gamepad text-4xl text-orange-500 mb-5"></i></p>
-                <p className='text-xl font-bold mt-5 mb-8'>Interactive Games</p>
-                <p className='text-gray-400'>Make carpooling fun with built-in games and icebreakers</p>
-            </div>
-            <div className='border-2 border-red-500 w-1/3 p-5  rounded-xl'>
-                <p><i className="fa-solid fa-location-dot text-4xl text-orange-500 mb-5"></i></p>
-                <p className='text-xl font-bold  mt-5 mb-8'>Discover Places</p>
-                <p  className='text-gray-400'>Get personalized recommendations for scenic spots and great eateries</p>
-            </div>
+    <div className='w-full min-h-screen mx-auto py-16 bg-gradient-to-r from-cyan-100 to-orange-100'>
+      <h2 className='text-center text-6xl font-extrabold mb-16 text-gray-800 tracking-tight'>
+        Everything You Need for the Perfect Road Trip
+      </h2>
+      <div className='flex flex-wrap justify-center gap-8'>
+        {/* Save on Gas Card */}
+        <div className='bg-white shadow-xl border border-gray-300 rounded-xl w-full sm:w-1/3 p-8 transform hover:scale-105 transition-all duration-500 ease-in-out hover:shadow-2xl'>
+          <p className='text-center'>
+            <i className="fa-solid fa-gas-pump text-5xl text-orange-500 mb-5"></i>
+          </p>
+          <p className='text-2xl font-semibold text-gray-800 mt-5 mb-3'>
+            Save on Gas
+          </p>
+          <div className='border-b-2 border-orange-500 mb-4'></div>
+          <p className='text-gray-600'>
+            Compare real-time gas prices and find the best deals on your route.
+          </p>
         </div>
+
+        {/* Interactive Games Card */}
+        <div className='bg-white shadow-xl border border-gray-300 rounded-xl w-full sm:w-1/3 p-8 transform hover:scale-105 transition-all duration-500 ease-in-out hover:shadow-2xl'>
+          <p className='text-center'>
+            <i className="fa-solid fa-gamepad text-5xl text-orange-500 mb-5"></i>
+          </p>
+          <p className='text-2xl font-semibold text-gray-800 mt-5 mb-3'>
+            Interactive Games
+          </p>
+          <div className='border-b-2 border-orange-500 mb-4'></div>
+          <p className='text-gray-600'>
+            Make carpooling fun with built-in games and icebreakers.
+          </p>
+        </div>
+
+        {/* Discover Places Card */}
+        <div className='bg-white shadow-xl border border-gray-300 rounded-xl w-full sm:w-1/3 p-8 transform hover:scale-105 transition-all duration-500 ease-in-out hover:shadow-2xl'>
+          <p className='text-center'>
+            <i className="fa-solid fa-location-dot text-5xl text-orange-500 mb-5"></i>
+          </p>
+          <p className='text-2xl font-semibold text-gray-800 mt-5 mb-3'>
+            Discover Places
+          </p>
+          <div className='border-b-2 border-orange-500 mb-4'></div>
+          <p className='text-gray-600'>
+            Get personalized recommendations for scenic spots and great eateries.
+          </p>
+        </div>
+      </div>
     </div>
-  )
+  );
 }
 
-export default CardsSection
+export default CardsSection;

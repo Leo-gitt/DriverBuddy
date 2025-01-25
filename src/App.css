@@ -1,0 +1,150 @@
+/* 3D Effect for the Container */
+.transform-gpu {
+    transform-style: preserve-3d;
+    perspective: 1000px;
+  }
+  
+  /* Spark Lines */
+  .spark-lines {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    pointer-events: none;
+  }
+  
+  .spark-lines::before,
+  .spark-lines::after {
+    content: "";
+    position: absolute;
+    background-color: rgba(255, 165, 0, 0.8);
+    height: 2px;
+    width: 100%;
+    animation: sparkLineAnimation 2s linear infinite;
+  }
+  
+  .spark-lines::before {
+    top: 20%;
+    transform: rotateX(45deg);
+    animation-delay: 0s;
+  }
+  
+  .spark-lines::after {
+    bottom: 20%;
+    transform: rotateX(-45deg);
+    animation-delay: 1s;
+  }
+  
+  @keyframes sparkLineAnimation {
+    0% {
+      opacity: 0;
+      transform: scale(0.5) translateY(50px);
+    }
+    50% {
+      opacity: 1;
+      transform: scale(1) translateY(0);
+    }
+    100% {
+      opacity: 0;
+      transform: scale(0.5) translateY(-50px);
+    }
+  }
+  
+  /* Sparks Animation */
+  @keyframes sparkle {
+    0% {
+      opacity: 0;
+      transform: scale(0.5) translateY(-100px);
+    }
+    50% {
+      opacity: 1;
+      transform: scale(1) translateY(0);
+    }
+    100% {
+      opacity: 0;
+      transform: scale(0.5) translateY(100px);
+    }
+  }
+  
+  .sparkles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    z-index: -1;
+  }
+  
+  .sparkles::before,
+  .sparkles::after {
+    content: "";
+    position: absolute;
+    background: radial-gradient(circle, #ffdd00, transparent);
+    border-radius: 50%;
+    animation: sparkle 2s infinite alternate;
+    opacity: 0.6;
+  }
+  
+  .sparkles::before {
+    top: 50%;
+    left: 30%;
+    width: 8px;
+    height: 8px;
+    animation-delay: 0.2s;
+  }
+  
+  .sparkles::after {
+    top: 60%;
+    left: 70%;
+    width: 10px;
+    height: 10px;
+    animation-delay: 0.5s;
+  }
+  @keyframes jump {
+    0% {
+      transform: translateY(0);
+    }
+    30% {
+      transform: translateY(-10px);
+    }
+    50% {
+      transform: translateY(0);
+    }
+    70% {
+      transform: translateY(-6px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes jump {
+    0% {
+      transform: translateY(0);
+    }
+    30% {
+      transform: translateY(-15px);
+    }
+    50% {
+      transform: translateY(0);
+    }
+    70% {
+      transform: translateY(-8px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  .animate-jump {
+    animation: jump 0.8s ease-in-out;
+  }
+
+.text-center:hover {
+    transition: color 0.3s ease;
+  }
+  
+  

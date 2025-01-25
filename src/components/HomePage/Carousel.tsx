@@ -24,35 +24,49 @@ const Carousel = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setIsSelected((prevSelected) => (prevSelected + 1) % quotes.length);
-    }, 2000);
+    }, 5000); // Auto transition every 5 seconds
 
     return () => clearInterval(interval);
   }, []);
 
   return (
-    <div className="bg-orange-500 mb-20 p-10 mt-20">
-      <div className="w-[90%] mx-auto">
-        <h3 className="text-5xl text-center">
-          What Our Users Say
-        </h3>
-      </div>
-      <p className="mt-10 text-center text-2xl">{quotes[isSelected].text}</p>
-      <p className={`text-end ${quotes[isSelected].width} mt-5`}>
-        {quotes[isSelected].author}
-      </p>
+    <div className="w-full min-h-screen mx-auto py-16 bg-gradient-to-r from-cyan-100 to-orange-100">
+      <div className="bg-gradient-to-r from-cyan-400 to-orange-400 mb-20 p-12 mt-20 rounded-3xl shadow-2xl transform transition-all duration-500 hover:scale-105">
+        <div className="w-[90%] mx-auto rounded-lg">
+          <h3 className="text-6xl text-center text-white font-extrabold tracking-wide uppercase shadow-lg">
+            What Our Users Say
+          </h3>
+        </div>
 
-      {/* <div className="flex justify-center pt-10">
-        {quotes.map((quote, index) => (
-          <div
-            key={index}
-            onClick={() => setIsSelected(index)}
-            aria-label={`Select quote ${index + 1}`}
-            className={`h-4 ${
-              isSelected === index ? "bg-orange-100" : "bg-orange-300"
-            } w-4 mr-5 rounded-md cursor-pointer border-4 border-red-500`}
-          ></div>
-        ))}
-      </div> */}
+        <div className="relative mt-10 text-center">
+          <p
+            className={`transition-all duration-1000 text-3xl md:text-4xl text-white font-semibold ${quotes[isSelected].width} mx-auto opacity-90 transform transition-transform duration-1000 ease-in-out`}
+          >
+            {quotes[isSelected].text}
+          </p>
+          <p
+            className={`text-xl text-gray-100 mt-5 ${quotes[isSelected].width} mx-auto italic`}
+          >
+            - {quotes[isSelected].author}
+          </p>
+        </div>
+
+        {/* Navigation Dots */}
+        <div className="flex justify-center pt-10">
+          {quotes.map((quote, index) => (
+            <div
+              key={index}
+              onClick={() => setIsSelected(index)}
+              aria-label={`Select quote ${index + 1}`}
+              className={`h-4 w-4 mx-2 rounded-full cursor-pointer transition-all duration-300 ease-in-out transform ${
+                isSelected === index
+                  ? "bg-white scale-150"
+                  : "bg-white opacity-60 hover:opacity-100 hover:scale-125"
+              }`}
+            ></div>
+          ))}
+        </div>
+      </div>
     </div>
   );
 };
