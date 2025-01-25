@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 const CardsSection = () => {
   return (
@@ -10,21 +10,21 @@ const CardsSection = () => {
         {/* Save on Gas Card */}
         <div className='bg-white shadow-xl border border-gray-300 rounded-xl w-full sm:w-1/3 p-8 transform hover:scale-105 transition-all duration-500 ease-in-out hover:shadow-2xl'>
           <p className='text-center'>
-            <i className="fa-solid fa-gas-pump text-5xl text-orange-500 mb-5"></i>
+            <i className='fa-solid fa-gas-pump text-5xl text-orange-500 mb-5'></i>
           </p>
           <p className='text-2xl font-semibold text-gray-800 mt-5 mb-3'>
-            Save on Gas
+            Earn Rewards
           </p>
           <div className='border-b-2 border-orange-500 mb-4'></div>
           <p className='text-gray-600'>
-            Compare real-time gas prices and find the best deals on your route.
+            Get discounts on gas, food and many other things on the road!
           </p>
         </div>
 
         {/* Interactive Games Card */}
         <div className='bg-white shadow-xl border border-gray-300 rounded-xl w-full sm:w-1/3 p-8 transform hover:scale-105 transition-all duration-500 ease-in-out hover:shadow-2xl'>
           <p className='text-center'>
-            <i className="fa-solid fa-gamepad text-5xl text-orange-500 mb-5"></i>
+            <i className='fa-solid fa-gamepad text-5xl text-orange-500 mb-5'></i>
           </p>
           <p className='text-2xl font-semibold text-gray-800 mt-5 mb-3'>
             Interactive Games
@@ -38,19 +38,20 @@ const CardsSection = () => {
         {/* Discover Places Card */}
         <div className='bg-white shadow-xl border border-gray-300 rounded-xl w-full sm:w-1/3 p-8 transform hover:scale-105 transition-all duration-500 ease-in-out hover:shadow-2xl'>
           <p className='text-center'>
-            <i className="fa-solid fa-location-dot text-5xl text-orange-500 mb-5"></i>
+            <i className='fa-solid fa-location-dot text-5xl text-orange-500 mb-5'></i>
           </p>
           <p className='text-2xl font-semibold text-gray-800 mt-5 mb-3'>
             Discover Places
           </p>
           <div className='border-b-2 border-orange-500 mb-4'></div>
           <p className='text-gray-600'>
-            Get personalized recommendations for scenic spots and great eateries.
+            Get personalized recommendations for scenic spots and great
+            eateries.
           </p>
         </div>
       </div>
     </div>
-  );
+  )
 }
 
-export default CardsSection;
+export default CardsSection
