@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 
 interface ButtonProps {
+  minWidth?: string
   width?: string
   height?: string
   borderRadius?: string
@@ -12,6 +13,7 @@ interface ButtonProps {
 
 const AppButton: React.FC<ButtonProps> = ({
   width = 'auto',
+  minWidth = '200px',
   height = 'auto',
   showIcon = false,
   borderRadius = '4px',
@@ -39,6 +41,7 @@ const AppButton: React.FC<ButtonProps> = ({
       <button
         style={{
           width: width,
+          minWidth: minWidth,
           height: height,
           borderRadius: borderRadius,
           backgroundColor: isHovered

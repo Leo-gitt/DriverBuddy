@@ -16,7 +16,7 @@ const HeroSection = () => {
 
       <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-10/12 max-w-4xl p-8 text-center bg-white/10 backdrop-blur-[50px] rounded-3xl shadow-lg border border-white/20'>
         <h1
-          className='text-6xl md:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r  animate-fade-in'
+          className='text-4xl md:text-5xl lg:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r  animate-fade-in'
           style={{
             backgroundImage:
               'linear-gradient(to right top, #d38e23, #ea744c, #00c8d4, #19d6ca)',

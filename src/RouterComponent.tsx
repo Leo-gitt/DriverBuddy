@@ -18,7 +18,7 @@ const RouterComponent = () => {
         <Route
           path='/'
           element={
-            <div>
+            <>
               <HomePage />
               <ExploreYourJourney />
               <CardsSection />
@@ -26,7 +26,7 @@ const RouterComponent = () => {
               <Registration />
               {/* <Carousel /> */}
               <Footer />
-            </div>
+            </>
           }
         />
       </Routes>

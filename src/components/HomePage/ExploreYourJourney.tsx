@@ -55,9 +55,9 @@ const ExploreYourJourney = () => {
         {/* Decorative Elements */}
         <div className='relative'>
           {/* Optional Text Overlay */}
-          <div className='absolute top-1/3 left-1/4 text-white text-4xl md:text-5xl font-extrabold transform -translate-x-1/2 opacity-90'>
+          <p className='mt-[20px] text-center text-gray-800 text-4xl md:text-5xl font-extrabold opacity-90'>
             Discover Your Next Adventure
-          </div>
+          </p>
         </div>
       </div>
     </div>
