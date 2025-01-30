@@ -6,7 +6,7 @@ const CardsSection = () => {
       <h2 className='text-center text-6xl font-extrabold mb-16 text-gray-800 tracking-tight'>
         Everything You Need for the Perfect Road Trip
       </h2>
-      <div className='flex flex-wrap justify-center gap-8'>
+      <div className='flex flex-wrap justify-center gap-8 px-[16px]'>
         {/* Save on Gas Card */}
         <div className='bg-white shadow-xl border border-gray-300 rounded-xl w-full sm:w-1/3 p-8 transform hover:scale-105 transition-all duration-500 ease-in-out hover:shadow-2xl'>
           <p className='text-center'>

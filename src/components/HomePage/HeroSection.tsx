@@ -40,6 +40,7 @@ const HeroSection = () => {
           </p>
         </div>
         <div className='text-center font-bold '>
+          <a href="#registrationForm">
           <AppButton
             showIcon={true}
             width='20%'
@@ -48,6 +49,7 @@ const HeroSection = () => {
           >
             Register and get rewards
           </AppButton>
+          </a>
         </div>
       </div>
     </div>
