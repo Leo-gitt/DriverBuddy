@@ -5,7 +5,7 @@ import CardsSection from './components/HomePage/CardsSection'
 import HowItWorks from './components/HomePage/HowItWorks'
 import Registration from './components/HomePage/Registration'
 import Footer from './components/HomePage/Footer'
-import Carousel from './components/HomePage/Carousel'
+// import Carousel from './components/HomePage/Carousel'
 
 const RouterComponent = () => {
   return (

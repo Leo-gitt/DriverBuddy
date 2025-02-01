@@ -1,4 +1,5 @@
-import React, { useState, useEffect, useRef } from 'react'
+import { useState, useEffect, useRef } from 'react'
+// import React, { useState, useEffect, useRef } from 'react'
 
 const ExploreYourJourney = () => {
   const [isVisible, setIsVisible] = useState(false)
@@ -16,13 +17,14 @@ const ExploreYourJourney = () => {
       }
     )
 
-    if (headingRef.current) {
-      observer.observe(headingRef.current)
+    const currentHeadingRef = headingRef.current;
+    if (currentHeadingRef) {
+      observer.observe(currentHeadingRef)
     }
 
     return () => {
-      if (headingRef.current) {
-        observer.unobserve(headingRef.current)
+      if (currentHeadingRef) {
+        observer.unobserve(currentHeadingRef)
       }
     }
   }, [])

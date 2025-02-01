@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from "react";
+// import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 const quotes = [
   {
@@ -53,7 +54,7 @@ const Carousel = () => {
 
         {/* Navigation Dots */}
         <div className="flex justify-center pt-10">
-          {quotes.map((quote, index) => (
+          {quotes.map((_, index) => (
             <div
               key={index}
               onClick={() => setIsSelected(index)}
